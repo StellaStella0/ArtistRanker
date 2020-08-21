@@ -1,32 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: sk-modernist-regular;
+  src: url('/fonts/Sk-Modernist-Regular.otf');
 }
 
-#nav {
-  padding: 30px;
+@font-face {
+  font-family: sk-modernist-bold;
+  src: url('/fonts/Sk-Modernist-Bold.otf');
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body{
+  margin: 0;
+  padding: 6vh 5vw;
+  font-family: sk-modernist-regular, sans-serif;
+  color: #303030;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+input{
+  font-family: sk-modernist-regular, sans-serif;
+}
+
+h1, .property-name, button{
+  font-family: sk-modernist-bold, sans-serif;
+}
+
+h2{
+  font-family: sk-modernist-regular, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+h1{
+  margin-bottom: 6vh;
+}
+
+.button-row{
+  display: flex;
+  flex-direction: row;
+  button:first-of-type{
+    margin-right: 10px;
+  }
+  img{
+    height: 1.1rem;
+    margin-top: 2px;
   }
 }
+
 </style>
